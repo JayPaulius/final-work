@@ -3,14 +3,13 @@ int size = int.Parse(InputText());
 string[] array = new string[size];
 FillArray(array);
 
-if (ElementsCount(array) == 0)
-    Console.WriteLine("в массиве нет элементов, длина которых меньше либо равна 3 символа");
-else
+if (ElementsCount(array) > 0)
 {
     string[] array2 = new string[ElementsCount(array)];
     GetArray2(array, array2);
     PrintArray(array2);
 }
+else Console.WriteLine("в массиве нет элементов, длина которых меньше либо равна 3 символа");
 
 string InputText()
 {
